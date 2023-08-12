@@ -57,7 +57,7 @@ module Staccato::V4
 
     def validate!
       Staccato::V4.validation_adapter.new(
-        default_adapter,
+        Staccato.default_adapter,
         validation_uri
       ).post_with_body(params, body)
     end
